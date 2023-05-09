@@ -1,11 +1,9 @@
 #include<iostream>
+#include<direct.h>
 
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-
-
-
-
-	return 0;
+	_mkdir("c:/myfolder");
+	return 0;	
 }
