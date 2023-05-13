@@ -1,22 +1,23 @@
-﻿#include<iostream>
+﻿
+#include <iostream>
 #include<direct.h>
-#include<string>
-#include "Main.h"
-#include <fstream>
-
+#include <stdio.h>
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-	
-	std::string name;
-	std::string str;
-	
-	std::cout << "Введите путь для создания папки -> " << std::endl;
-	std::getline(std::cin, name);
-	std::cout << "\n";
-	
-	std::getline(std::cin, str);
-	_mkdir(str.c_str());
-
-	return 0;	
+	char n;
+	char check;
+	std::cout << " Создать папку: ";
+	std::cin >> n;
+	char *dirname = &n;
+	check = _mkdir(dirname);
+	// check if directory is created or not
+	if (!check)
+		printf("Вы создали папку\n");
+	else {
+		printf("Unable to create directory\n");
+		exit(1);		
+	}
+	system("dir");
+	return 0;
 }
