@@ -1,16 +1,22 @@
 ﻿#include<iostream>
 #include<direct.h>
-#include<sstream>
-#include<fstream>
+#include<string>
+#include "Main.h"
+#include <fstream>
 
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-		
-	std::cout << "Введите путь для создания папки -> ";
-	std::string fold_path;
-	std::getline(std::cin, fold_path);
-	_mkdir("fold_path");
+	
+	std::string name;
+	std::string str;
+	
+	std::cout << "Введите путь для создания папки -> " << std::endl;
+	std::getline(std::cin, name);
+	std::cout << "\n";
+	
+	std::getline(std::cin, str);
+	_mkdir(str.c_str());
 
 	return 0;	
 }
