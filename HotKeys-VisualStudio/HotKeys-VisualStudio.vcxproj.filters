@@ -21,7 +21,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы ресурсов</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Файлы ресурсов</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
